@@ -1,12 +1,12 @@
 ﻿# 第1次作業-作業-HW1
 >
->學號：1234567 
+>學號：109111104
 ><br />
->姓名：王小明 
+>姓名：李彥賓 
 ><br />
->作業撰寫時間：180 (mins，包含程式撰寫時間)
+>作業撰寫時間：15 (mins，包含程式撰寫時間)
 ><br />
->最後撰寫文件日期：2022/10/12
+>最後撰寫文件日期：2022/9/26
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -23,27 +23,34 @@
 下段程式碼則為使用後結果：
 
 ```csharp
-public void mt_getResult(){
-    ...
-}
+protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Write("Hello App");
+        }
+
+        protected void btn_Show_Click(object sender, EventArgs e)
+        {
+            Response.Write("Hello Button");
+        }
 ```
 
 若要於內文中標示部分.aspx檔，則使用以下標籤` ```html 程式碼 ``` `，
 下段程式碼則為使用後結果：
 
 ```html
-<%@ Page Language="C#" AutoEventWireup="true" ...>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="_111_1HW1.Test" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" ...>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Button ID="btn_Show" runat="server" Text="Button" OnClick="btn_Show_Click" />
         </div>
     </form>
 </body>
@@ -56,3 +63,4 @@ public void mt_getResult(){
 開始寫說明，需要說明本次作業個人覺得需學會那些觀念 (需寫成文章，需最少50字，
 並且文內不得有你、我、他三種文字)
 
+如何建立一個按鈕，寫一段程式讓按按鈕時會有文字出現。
